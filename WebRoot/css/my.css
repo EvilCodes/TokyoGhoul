@@ -1,0 +1,49 @@
+.my-nav{
+	margin-bottom: 0px !important;
+}
+.content{
+	padding:100px 0px;
+	min-height:400px;
+}
+
+.footer{
+	border-top: 1px solid #e5e5e5;
+}
+
+.footer-menu{
+	padding: 50px 0px;
+	
+}
+
+.footer-left{
+	
+}
+
+.footer-right{
+	
+}
+
+.footer-right ul{
+	list-style: none;
+}
+
+.footer-right ul li:first-child{
+	font-weight: bolder;
+	margin-bottom: 5px;
+}
+
+.footer-beian{
+	border-top: 1px solid #e5e5e5;
+	padding: 15px 0px;
+}
+.login,.register{
+	margin-bottom:0px !important;
+	width: 500px;
+	
+}
+.login-wrap,.register-wrap{
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:center;
+}
