@@ -49,8 +49,8 @@ public class NewsTypeServices {
 	public boolean edit(NewsType record)throws Exception{
 		boolean result=false;
 		SqlSession sqlSession=MyBatisUtil.getSqlSessionFactory().openSession(false);
-		NewsMapper newsMapper = sqlSession.getMapper(NewsMapper.class);
-		int resultTemp=newsMapper.updateByPrimaryKey(record);
+		NewsTypeMapper newsTypeMapper = sqlSession.getMapper(NewsTypeMapper.class);
+		int resultTemp=newsTypeMapper.updateByPrimaryKey(record);
 		if (resultTemp>0) {
 			sqlSession.commit();
 			result=true;

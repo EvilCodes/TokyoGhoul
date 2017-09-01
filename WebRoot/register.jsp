@@ -54,10 +54,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="col-xs-9">
 							<div class="row">
 								<div class="col-xs-6">
-									<input type="text" class=" form-control" id="inputText3"placeholder="请输入验证码">
+									<input type="text" name="kaptcha" class=" form-control" id="inputText3"placeholder="请输入验证码">
 								</div>	
 								<div class="col-xs-6">
-									<img src="" alt="">
+									<img id="kaptchaImage" src="<%=basePath %>servlet/kaptcha" alt="">
 								
 								</div>
 							</div>
@@ -81,3 +81,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
+
+<script>
+
+
+	$(function(){
+		$('#kaptchaImage').click(function(){
+		
+			$(this).attr('src','<%=basePath%>servlet/kaptcha?'+Math.floor(Math.random()));
+			
+		});
+	
+	});
+
+
+</script>

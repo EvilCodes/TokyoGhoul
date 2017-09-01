@@ -12,7 +12,7 @@ public interface NewsMapper {
 
     int insert(News record);
     
-    List<News> selectByExample(NewsType newsType);
+    List<News> selectByExample();
     
     List<News> selectByType(NewsType newsType);
     

@@ -8,6 +8,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.hyt.util.app.AppUtil;
 import com.hyt.util.log.LogUtil;
@@ -42,15 +43,11 @@ public class AppListener implements ServletContextListener,ServletContextAttribu
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		String logTarget = sce.getServletContext().getInitParameter("logTarget");
-		LogManager.getLogger(logTarget);
+		LogUtil.logger = LogManager.getLogger(logTarget);
 		LogUtil.log("***************应用启动**************");
 		//获取上下文
 		AppUtil.SC=sce.getServletContext();
 		LogUtil.log("**************AppUtil.SC_OK******************");
-		
-		
-		
-		
 		
 	}
 
